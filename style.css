@@ -69,12 +69,6 @@
     --background-image-url:url(assets/background_small.png);
 }
 
-.hachi-maru-pop-regular {
-    font-family: "Hachi Maru Pop", serif;
-    font-weight: 400;
-    font-style: normal;
-}  
-
 .icon{
     border-radius: 50%;
     width: min(100px, 100%);
