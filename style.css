@@ -1,0 +1,134 @@
+#main-drawer{
+    width: 100%;
+    text-align: center;
+    background-color: #ffffff88;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px #00000011;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    & > a{
+        text-decoration: none;
+        color: #000000;
+    }
+    & > *{
+        padding: 10px;
+        &.drawer{
+            border-top: 1px solid #00000011;
+        }
+    }
+}
+
+.link-card{
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 0px 0px #00000011;
+    transition: box-shadow .3s ease-in-out;
+    & > img{
+        border-radius: 10px;
+        border: 10px solid transparent;
+        transition: box-shadow .3s ease-in-out;
+        box-shadow: 0 4px 5px #00000033;
+    }
+    & > div{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-items: center;
+        padding: 10px;
+        & > .title{
+            font-weight: bold;
+        }
+    }
+    &.link > div{
+        background: bottom right / 10px no-repeat url(assets/box-arrow-up-right.svg);
+    }
+    &:hover{
+        box-shadow: 0 5px 5px #00000011;
+        & > img{
+            box-shadow: 0 2px 3px #00000033;
+        }
+    }
+    &.link{
+        &::after{
+            content: "";
+            width: 0px;
+            transition: width .3s;
+            background: right / 30px no-repeat url(assets/arrow-right.svg);
+        }
+        &:hover::after{
+            width: 30px;
+        }
+    }
+    
+}
+
+*{
+    --color-icon-border-1:hsl(343deg 60% 65%);
+    --color-icon-border-2:hsl(207deg 60% 65%);
+    --background-image-url:url(assets/background_small.png);
+}
+
+.hachi-maru-pop-regular {
+    font-family: "Hachi Maru Pop", serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+.icon{
+    border-radius: 50%;
+    width: min(100px, 100%);
+    border: 5px solid transparent;
+}
+
+:root{
+    margin: 10px;
+    position: relative;
+    z-index: 10;
+    font-family: "M PLUS Rounded 1c", serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    :before {
+        content: '';
+        z-index: -10;
+
+        background: var(--background-image-url);
+        background-size: cover;
+        background-position: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        filter: blur(10px);
+    }
+}
+
+.infolist{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#birthday{
+    list-style-image: url(assets/cake.svg);
+}
+#timezone{
+    list-style-image: url(assets/clock.svg);
+}
+#country{
+    list-style-image: url(assets/flag.svg);
+}
+
+@media screen and (min-width:600px) {
+    #main-drawer{
+        width: 600px;
+    }
+    *{
+        --background-image-url:url(assets/background.png);
+    }
+}
