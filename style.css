@@ -65,6 +65,7 @@
     font-style: normal;
     width: 100%;
     background: center / cover var(--background-image-url) no-repeat;
+    background-attachment: fixed;
     box-sizing: border-box;
 }
 body{
