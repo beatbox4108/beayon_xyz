@@ -34,9 +34,16 @@
         padding: 10px;
         & > .title{
             font-weight: bold;
+            font-size: 1.2em;
+        }
+        & > .description{
+            font-size: .8em;
+            color: #444444
         }
     }
-    
+    &.link > div{
+        background: bottom right / 10px no-repeat url(assets/box-arrow-up-right.svg);
+    }
 }
 
 *{
@@ -90,9 +97,9 @@ body{
     list-style-image: url(assets/flag.svg);
 }
 
-@media screen and (min-width:600px) {
+@media screen and (min-width:480px) {
     #main-drawer{
-        width: 600px;
+        width: 480px;
         border-radius: 10px;
     }
     *{
@@ -104,6 +111,9 @@ body{
         flex-direction: column;
         padding: 10px;
     }
+}
+
+@media screen and (min-width:800px) {
     .link-card{
         box-shadow: 0 0px 0px #00000011;
         transition: box-shadow .3s ease-in-out;
@@ -111,7 +121,7 @@ body{
             transition: box-shadow .3s ease-in-out;
         }
         &.link > div{
-            background: bottom right / 10px no-repeat url(assets/box-arrow-up-right.svg);
+            background: none;
         }
         &:hover{
             box-shadow: 0 5px 5px #00000011;
