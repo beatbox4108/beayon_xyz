@@ -102,9 +102,6 @@ body{
         width: 480px;
         border-radius: 10px;
     }
-    *{
-        --background-image-url:url(assets/background.png);
-    }
     #wrapper{
         display: flex;
         align-items: center;
