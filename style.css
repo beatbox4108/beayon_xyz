@@ -20,12 +20,9 @@
 .link-card{
     display: flex;
     border-radius: 10px;
-    box-shadow: 0 0px 0px #00000011;
-    transition: box-shadow .3s ease-in-out;
     & > img{
         border-radius: 10px;
         border: 10px solid transparent;
-        transition: box-shadow .3s ease-in-out;
         box-shadow: 0 4px 5px #00000033;
     }
     & > div{
@@ -108,6 +105,11 @@ body{
         padding: 10px;
     }
     .link-card{
+        box-shadow: 0 0px 0px #00000011;
+        transition: box-shadow .3s ease-in-out;
+        & > img{
+            transition: box-shadow .3s ease-in-out;
+        }
         &.link > div{
             background: bottom right / 10px no-repeat url(assets/box-arrow-up-right.svg);
         }
