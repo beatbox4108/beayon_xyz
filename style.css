@@ -2,9 +2,8 @@
     width: 100%;
     text-align: center;
     background-color: #ffffff88;
-    border-radius: 10px;
     box-shadow: 0 5px 5px #00000011;
-    padding: 10px 20px;
+    padding: 20px 10px;
     box-sizing: border-box;
     & > a{
         text-decoration: none;
@@ -40,26 +39,6 @@
             font-weight: bold;
         }
     }
-    &.link > div{
-        background: bottom right / 10px no-repeat url(assets/box-arrow-up-right.svg);
-    }
-    &:hover{
-        box-shadow: 0 5px 5px #00000011;
-        & > img{
-            box-shadow: 0 2px 3px #00000033;
-        }
-    }
-    &.link{
-        &::after{
-            content: "";
-            width: 0px;
-            transition: width .3s;
-            background: right / 30px no-repeat url(assets/arrow-right.svg);
-        }
-        &:hover::after{
-            width: 30px;
-        }
-    }
     
 }
 
@@ -76,30 +55,22 @@
 }
 
 :root{
-    margin: 10px;
     position: relative;
     z-index: 10;
     font-family: "M PLUS Rounded 1c", serif;
     font-weight: 400;
     font-style: normal;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    width: 100%;
+    background: center / cover var(--background-image-url) no-repeat;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
 
-    :before {
-        content: '';
-        z-index: -10;
-
-        background: var(--background-image-url);
-        background-size: cover;
-        background-position: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        filter: blur(3px);
-    }
+#wrapper{
+    min-height: 100vh;
+    backdrop-filter: blur(3px);
 }
 
 .infolist{
@@ -121,8 +92,39 @@
 @media screen and (min-width:600px) {
     #main-drawer{
         width: 600px;
+        border-radius: 10px;
     }
     *{
         --background-image-url:url(assets/background.png);
+    }
+    #wrapper{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .link-card{
+        &.link > div{
+            background: bottom right / 10px no-repeat url(assets/box-arrow-up-right.svg);
+        }
+        &:hover{
+            box-shadow: 0 5px 5px #00000011;
+            & > img{
+                box-shadow: 0 2px 3px #00000033;
+            }
+        }
+        &.link{
+            &::after{
+                content: "";
+                width: 0px;
+                transition: width .3s;
+                background: right / 30px no-repeat url(assets/arrow-right.svg);
+            }
+            &:hover{
+                &::after{
+                    width: 30px;
+                }
+            }
+        }
     }
 }
