@@ -43,8 +43,8 @@
 }
 
 *{
-    --color-icon-border-1:hsl(343deg 60% 65%);
-    --color-icon-border-2:hsl(207deg 60% 65%);
+    --color-icon-border-1:hsl(207deg 60% 65%);
+    --color-icon-border-2:hsl(343deg 60% 65%);
     --background-image-url:url(assets/background_small.png);
 }
 
@@ -52,6 +52,9 @@
     border-radius: 50%;
     width: min(100px, 100%);
     border: 5px solid transparent;
+    background: no-repeat linear-gradient(var(--color-icon-border-1),var(--color-icon-border-2));
+    background-clip: border-box;
+    background-origin: border-box;
 }
 
 :root{
